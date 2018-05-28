@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class IndexServlet
  */
 @WebServlet("/index")
-public class IndexServlet extends HttpServlet {
+public class IndexServlet extends HttpServlet {//データベースから複数のメッセージ情報を取得して一覧表示するサーブレット
 	private static final long serialVersionUID = 1L;
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
