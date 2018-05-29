@@ -16,6 +16,10 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getAllTasks",
             query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"//JPQL テーブル名はクラス名に合わせる必要がある。
+            ),
+    @NamedQuery(
+            name = "getTasksCount",
+            query = "SELECT COUNT(m) FROM Tasks AS m"
             )
 })
 @Table(name = "tasks")
