@@ -4,7 +4,7 @@
 <c:import url="../layout/app.jsp">
 	<c:param name="content">
 		<c:choose>
-			<c:when test="${message != null}">
+			<c:when test="${tasks != null}">
 				<h2>id : ${tasks.id} のタスク編集ページ</h2>
 
 				<form method="POST"

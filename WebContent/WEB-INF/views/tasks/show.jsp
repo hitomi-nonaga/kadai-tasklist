@@ -5,7 +5,7 @@
 <c:import url="../layout/app.jsp">
 	<c:param name="content">
 		<c:choose>
-			<c:when test="${message != null}">
+			<c:when test="${tasks != null}">
 				<h2>id : ${tasks.id} のタスク詳細ページ</h2>
 
 				<table>
@@ -15,8 +15,16 @@
 							<td><c:out value="${tasks.title}" /></td>
 						</tr>
 						<tr>
-							<th>メッセージ</th>
+							<th>タスク</th>
 							<td><c:out value="${tasks.content}" /></td>
+						</tr>
+						<tr>
+							<th>期限</th>
+							<td><c:out value="${tasks.deadline}" /></td>
+						</tr>
+						<tr>
+							<th>状況</th>
+							<td><c:out value="${tasks.status}" /></td>
 						</tr>
 						<tr>
 							<th>作成日時</th>

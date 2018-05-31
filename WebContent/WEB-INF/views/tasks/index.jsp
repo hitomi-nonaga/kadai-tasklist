@@ -15,9 +15,15 @@
 			<c:forEach var="tasks" items="${tasks}">
 				<li><a
 					href="${pageContext.request.contextPath}/show?id=${tasks.id}">
-						<c:out value="${tasks.id}" />
-				</a> ：<c:out value="${tasks.title}"></c:out> &gt; <c:out
-						value="${tasks.content}" /></li>
+						<c:out value="詳細ページへ" />
+				    </a> ：
+				    <b>&#12304;
+				        <c:out value="${tasks.title}"></c:out> &#12305;
+				    </b>
+				        <c:out value="${tasks.content}" />
+				        <font color="#ff1493">（期限：<c:out value="${tasks.deadline}" />まで）</font>
+				        <font size="-1">状況：<c:out value="${tasks.status}" /></font>
+				</li>
 			</c:forEach>
 		</ul>
 

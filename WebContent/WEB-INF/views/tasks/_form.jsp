@@ -12,13 +12,25 @@
 
 <label for="title">タイトル</label>
 <br />
-<input type="text" name="title" value="${message.title}" />
+<input type="text" name="title" value="${tasks.title}" />
 <br />
 <br />
 
 <label for="content">タスク</label>
 <br />
-<input type="text" name="content" value="${message.content}" />
+<input type="text" name="content" value="${tasks.content}" />
+<br />
+<br />
+
+<label for="content">期限</label>
+<br />
+<input type="date" name="deadline" value="${tasks.deadline}" />
+<br />
+<br />
+
+<label for="content">状況</label>
+<br />
+<input type="text" name="status" value="${tasks.status}" />
 <br />
 <br />
 

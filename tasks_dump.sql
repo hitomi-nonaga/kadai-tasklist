@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 5.7.22, for Win64 (x86_64)
+--
+-- Host: localhost    Database: tasks
+-- ------------------------------------------------------
+-- Server version	5.7.22-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tasks`
+--
+
+DROP TABLE IF EXISTS `tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tasks`
+--
+
+LOCK TABLES `tasks` WRITE;
+/*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+INSERT INTO `tasks` VALUES (1,'aaaaa','2018-05-29 15:50:23','test','2018-05-29 15:50:23'),(2,'てすと','2018-05-29 15:50:29','aaaaaa','2018-05-29 15:50:29'),(3,'てすと','2018-05-29 15:50:33','てｓｔ','2018-05-29 15:50:33'),(4,'aaaaa2','2018-05-29 15:50:39','test2','2018-05-29 15:50:39'),(5,'eeeeeeeee','2018-05-29 15:50:44','eeeeee','2018-05-29 15:50:44'),(6,'aaaaaaaaaaaaaaa','2018-05-29 15:50:48','aaa','2018-05-29 15:50:48'),(7,'ggg','2018-05-29 15:50:52','g','2018-05-29 15:50:52'),(8,'111111','2018-05-29 15:50:57','1111','2018-05-29 15:50:57'),(9,'3254345','2018-05-29 15:51:02','41241432','2018-05-29 15:51:02'),(10,'ええええええええええ','2018-05-29 15:51:10','あああああああああああああ','2018-05-29 15:51:10'),(11,'ｐｐｐｐｐ','2018-05-29 15:51:17','ｐ','2018-05-29 15:51:17'),(12,'ｌｌｌｌｌｌｌｌｌｌｌｌｌ','2018-05-29 15:51:29','ｌｌｌｌ','2018-05-29 15:51:29'),(13,'13333333333','2018-05-29 15:51:35','１３','2018-05-29 15:51:35'),(14,'1444444444444４','2018-05-29 15:51:41','14日','2018-05-29 15:51:41'),(15,'１５５５５５５','2018-05-29 15:51:48','15ページ','2018-05-29 15:51:48'),(16,'てｓｔ','2018-05-29 15:51:56','て、','2018-05-29 15:51:56');
+/*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-05-29 16:07:16

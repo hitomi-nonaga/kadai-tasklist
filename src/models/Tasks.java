@@ -15,11 +15,11 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllTasks",
-            query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"//JPQL テーブル名はクラス名に合わせる必要がある。
+            query = "SELECT t FROM Tasks AS t ORDER BY t.deadline ASC"
             ),
     @NamedQuery(
             name = "getTasksCount",
-            query = "SELECT COUNT(m) FROM Tasks AS m"
+            query = "SELECT COUNT(t) FROM Tasks AS t"
             )
 })
 @Table(name = "tasks")
@@ -41,6 +41,12 @@ public class Tasks {//DTO(データベースの各カラムに対応した変数
 
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
+
+    @Column(name = "deadline", nullable = false)
+    private String deadline;
+
+    @Column(name = "status", length = 255, nullable = false)
+    private String status;
 
     public Integer getId() {
         return id;
@@ -80,6 +86,22 @@ public class Tasks {//DTO(データベースの各カラムに対応した変数
 
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }
