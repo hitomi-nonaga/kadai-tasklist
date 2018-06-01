@@ -50,6 +50,11 @@ public class UpdateServlet extends HttpServlet {
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             t.setUpdated_at(currentTime);
 
+            t.setDeadline(request.getParameter("deadline"));
+
+            String status = request.getParameter("status");
+            t.setStatus(status);
+
             List<String> errors = TasksValidator.validate(t);
             if(errors.size() > 0) {
                 em.close();
